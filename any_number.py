@@ -2,35 +2,21 @@
 
 # Created by Devin Jhu
 # Created on May 2022
-# The numbers caculator
+# The counter
 
 
 def main():
-    # this program shows the sum of all numbers from 0 to number
-    counter = 0
-    sum = 0
-    number_counter = 1
-
-    # input
-    number = input("Enter number to add too (integer): ")
+    # this program counts
+    counter = 1000
 
     # process & output
-    try:
-        number_int = int(number)
-        for counter in range(number_int):
-            added_number = input("Enter number {0} (integer): ".format(number_counter))
-            added_number_string = int(added_number)
+    for counter in range(1000, 2001):
+        if counter % 5 == 0:
+            print("\n{0} ".format(counter), end=" ")
+        else:
+            print("{0} ".format(counter), end=" ")
 
-            if added_number_string < 0:
-                continue
-
-            sum = sum + added_number_string
-            counter = counter + 1
-            number_counter = number_counter + 1
-        print("The sum of all numbers is  {0}".format(sum))
-
-    except Exception:
-        print("Not a number.")
+    counter = counter + 1
     print("\nDone.")
 
 
